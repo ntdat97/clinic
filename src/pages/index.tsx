@@ -1,22 +1,29 @@
 import Head from "next/head";
 import Image from "next/image";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import { Herotitle } from "@/component/Hero";
 import { Header } from "@/component/Header";
-import { Card } from "@/component/Card";
 import { CardSection } from "@/component/Card-section";
-import { Story } from "@/component/story";
+import Story, { StoryData } from "@/component/story";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { Welcome } from "@/component/Welcome";
 
-const myFont = localFont({ src: '../font/DidotW01Italic.ttf' })
-
-export default function Home() {
+export default function Home({ source }: StoryData) {
   return (
     <>
-
-    <Header />
+      <Header />
       <Herotitle />
       <CardSection />
-      <Story />
+      <Story source={source} />
+      <Welcome />
     </>
   );
+}
+export async function getStaticProps() {
+  const data = await fetch("http://localhost:3000/api/story").then((response) =>
+    response.json()
+  );
+  const mdxSource = await serialize(data.storyMd);
+  return { props: { source: mdxSource } };
 }
