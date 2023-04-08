@@ -5,7 +5,7 @@ const montserrat = Montserrat({ preload: false });
 export const Card = () => {
   return (
     <div className="w-full sm:w-1/2 lg:w-1/4 p-1.5">
-      <div className="p-6 pb-8 pt-9 h-full  bg-[#4d4d4d] flex flex-col ">
+      <div className="p-5 pb-7 lg:pb-8 lg:pt-9 h-full  bg-[#4d4d4d] flex flex-col ">
         <div className="relative h-[45%]  flex justify-center items-center  overflow-hidden rounded-md ">
           <span className=" leading-relaxed text-white text-[50px] lg:text-[100px] font-thin tracking-wider    m-0 p-0">
             <span className={myFont.className}>01</span>
