@@ -1,12 +1,8 @@
-import Head from "next/head";
-import Image from "next/image";
-import localFont from "next/font/local";
 import { HeroTitle } from "@/component/Hero";
 import { Header } from "@/component/Header";
 import { CardSection } from "@/component/Card-section";
 import Story, { StoryData } from "@/component/story";
 import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { Welcome } from "@/component/Welcome";
 import { OpenTime } from "@/component/open-time";
 import { Feedback } from "@/component/feedback";

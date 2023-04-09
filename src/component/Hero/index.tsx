@@ -1,6 +1,5 @@
 import { useTransitionEffect } from "@/hooks/transition-effect";
 import { Playfair_Display } from "next/font/google";
-import { useEffect, useRef, useState } from "react";
 
 const playfair = Playfair_Display({ preload: false });
 export const HeroTitle = () => {

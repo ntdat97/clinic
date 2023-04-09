@@ -1,8 +1,5 @@
-import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { useEffect, useState } from "react";
-import Test from "./custom-component";
-import TransitionText from "./custom-component";
+import TransitionText from "./component/index";
 import { Montserrat } from "next/font/google";
 
 export interface StoryData {
