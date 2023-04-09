@@ -11,7 +11,7 @@ export interface StoryData {
 const montserrat = Montserrat({ preload: false });
 export default function Story({source}:StoryData) {
   return (
-    <div className={montserrat.className + " px-6 lg:max-w-[980px] mx-auto lg:text-[16px] text-[13px]"}>
+    <div className={montserrat.className + " px-6 lg:max-w-[980px] mx-auto lg:text-[16px] text-[13px] mb-12"}>
       <MDXRemote {...source} components={{ TransitionText }}/> 
     </div>
   );

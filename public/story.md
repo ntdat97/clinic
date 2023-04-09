@@ -27,4 +27,4 @@ Vì vậy,
 										  <span className=" font-bold lg:max-w-[400px]" style={{fontSize: "24px", lineHeight: "normal", marginBottom: "10px"}}>chúng ta cùng cố gắng hết sức để trả lại cho bạn làn da đẹp nhất vốn có của bạn.</span> </TransitionText>
 
 
-Đặt lịch tư vấn cùng chúng tôi tại phòng khám để được đánh giá da miễn phí hoặc tìm hiểu thêm về các dịch vụ mà chúng tôi cung cấp.​
+<p className="text-center">Đặt lịch tư vấn cùng chúng tôi tại phòng khám để được đánh giá da miễn phí hoặc tìm hiểu thêm về các dịch vụ mà chúng tôi cung cấp.​ </p>

@@ -8,15 +8,21 @@ import Story, { StoryData } from "@/component/story";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { Welcome } from "@/component/Welcome";
+import { OpenTime } from "@/component/open-time";
+import { Montserrat } from "next/font/google";
 
+const montserrat = Montserrat({ preload: false });
 export default function Home({ source }: StoryData) {
   return (
     <>
-      <Header />
-      <Herotitle />
-      <CardSection />
-      <Story source={source} />
-      <Welcome />
+      <div className={montserrat.className}>
+        <Header />
+        <Herotitle />
+        <CardSection />
+        <Story source={source} />
+        <Welcome />
+        <OpenTime />
+      </div>
     </>
   );
 }
