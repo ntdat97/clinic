@@ -1,47 +1,30 @@
+import { ItemHeader } from "./component/item";
+
 export const Header = () => {
   return (
-    <section className="static bg-[#e8dfd2] overflow-hidden">
-      <nav className="relative flex px-16 py-8 lg:py-0 justify-between bg-transparent ">
-        <div className="pr-14 flex items-center">
+    <section className="static  overflow-hidden">
+      <nav className="relative lg:fixed top-0 bg-[#e8dfd2] left-0 w-full flex px-16 py-14 lg:py-0 justify-between z-50">
+        <div className="lg:pr-14 flex items-center">
           <a
             className="inline-block text-xl text-white font-medium font-heading"
             href="#"
           >
-            <img className="h-12" width="auto" src="./lang.webp" alt="" /> 
+            <img
+              className="h-auto w-64 lg:w-54"
+              width="auto"
+              src="./logo-mobile.webp"
+              alt=""
+            />
           </a>
         </div>
         <div className="hidden lg:block ml-auto mr-10 pt-14 pb-4">
           <ul className="flex items-center">
-             <li className="mr-5">
-              <a className="text-gray-500 hover:text-gray-400" href="#">
-                Trang chủ
-              </a>
-            </li>
-            <li className="mr-5">
-              <a className="text-gray-500 hover:text-gray-400" href="#">
-                Dịch vụ
-              </a>
-            </li>
-            <li className="mr-5">
-              <a className="text-gray-500 hover:text-gray-400" href="#">
-                Điều trị da
-              </a>
-            </li>
-            <li className="mr-5">
-              <a className="text-gray-500 hover:text-gray-400" href="#">
-                Về chúng tôi
-              </a>
-            </li>
-            <li className="mr-5">
-              <a className="text-gray-500 hover:text-gray-400" href="#">
-                Sản phẩm
-              </a>
-            </li>
-            <li className="mr-5">
-              <a className="text-gray-500 hover:text-gray-400" href="#">
-                Liên hệ
-              </a>
-            </li>
+            <ItemHeader href="#" text="Trang chủ" />
+            <ItemHeader href="#" text="Dịch vụ" />
+            <ItemHeader href="#" text="Điều trị da" />
+            <ItemHeader href="#" text="Về chúng tôi" />
+            <ItemHeader href="#" text="Sản phẩm" />
+            <ItemHeader href="#" text="Liên hệ" />
             <li>
               <a
                 className="inline-flex items-center justify-center py-3 px-6 rounded-full hover:bg-[#dfd6c9] transform duration-200"
@@ -63,11 +46,11 @@ export const Header = () => {
                 </svg>
                 Đăng nhập
               </a>
-            </li> 
+            </li>
           </ul>
         </div>
 
-        <button className="navbar-burger lg:hidden self-center">
+        <button className="fixed right-8 navbar-burger lg:hidden self-center">
           <svg
             width={24}
             height={24}
